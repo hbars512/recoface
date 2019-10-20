@@ -1,0 +1,16 @@
+div .date {
+  margin-top: 60px;
+  font-size: 30px;
+  text-align: center;
+}
+
+div .clock {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  font-size: 30px;
+  text-align: center;
+}
+
+div .buttonw {
+  text-align-last: center;
+}
