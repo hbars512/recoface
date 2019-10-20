@@ -13,11 +13,11 @@ include "./function/header.php";
         <!-- Text input-->
 
         <div class="form-group">
-            <label class="col-md-4 control-label">Cedula</label>
+            <label class="col-md-4 control-label">Codigo</label>
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-align-center"></i></span>
-                    <input onkeypress="solonum()" onpaste="alert('No puedes pegar');return false" id="cedula" minlength="7" maxlength="8" required="" name="cedula" placeholder="Ingrese su cedula" class="form-control"  type="text">
+                    <input onkeypress="solonum()" onpaste="alert('No puedes pegar');return false" id="codigo" minlength="7" maxlength="8" required="" name="codigo" placeholder="Ingrese su Codigo" class="form-control"  type="text">
                 </div>
             </div>
         </div>

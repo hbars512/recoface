@@ -4,7 +4,7 @@ include "./function/nav.php";
 include "./function/header.php";
 include './function/listar.php';
 ?>
-<h3>Listado de Registro de Pacientes</h3><hr>
+<h3>Listado de Registro de Profesores</h3><hr>
 <?php
 if (isset($data)) {
 
@@ -21,7 +21,7 @@ if (isset($data)) {
                 $i++;
                 ?>
                 <div class="caption">
-                    <p><b>Cedula:</b><?=
+                    <p><b>Codigo:</b><?=
                         $data[$i];
                         $i++;
                         ?></p>
@@ -53,7 +53,7 @@ if (isset($data)) {
                                 <div class="modal-body">
                                     <?php
                                     $datos = filtrar($data[$i]);
-                                    $campo = array('CEDULA', 'NOMBRE', 'APELLIDO', 'EDAD', 'FECHA DE NAC', 'SEXO', 'EMAIL', 'MOVIL', 'DIRECCION', 'OBSERVACIONES');
+                                    $campo = array('CODIGO', 'NOMBRE', 'APELLIDO', 'EDAD', 'FECHA DE NAC', 'SEXO', 'EMAIL', 'MOVIL', 'DIRECCION', 'OBSERVACIONES');
                                     for ($j = 0; $j < count($datos); $j++) {
                                         echo "<b>" . $campo[$j] . "</b>" . "= " . strtoupper($datos[$j]) . "<br>";
                                     }

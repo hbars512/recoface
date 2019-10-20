@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="iso-8859-1"/>
-        <title>Estudiante</title>
+        <title>Profesores</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="shortcat icon" href="img/shortcat.png">
         <link rel="stylesheet" href="css/mystilo.css" type="text/css"/>

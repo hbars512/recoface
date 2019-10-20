@@ -1,6 +1,6 @@
 <?php
 
-$var = ['cedula', 'nombre', 'apellido', 'edad', 'fecha_nac', 'sexo', 'email', 'movil', 'direccion', 'observaciones'];
+$var = ['codigo', 'nombre', 'apellido', 'edad', 'fecha_nac', 'sexo', 'email', 'movil', 'direccion', 'observaciones'];
 
 for ($i=0; $i < count($var); $i++) {
     $_POST[$var[$i]] = trim($_POST[$var[$i]]);
@@ -8,12 +8,12 @@ for ($i=0; $i < count($var); $i++) {
     if ( empty($_POST[$var[$i]]) )  return header("location: ../index.php");
 }
 
-$sql = "INSERT INTO estudiantes (cedula, nombre, apellido, edad, fecha_nac, sexo, email, movil, direccion, observaciones) VALUES (:CED, :NOM, :APE, :EDAD, :F_NAC, :SEXO, :EMAIL, :MOVIL, :DIR, :OBSE)";
+$sql = "INSERT INTO profesores (codigo, nombre, apellido, edad, fecha_nac, sexo, email, movil, direccion, observaciones) VALUES (:COD, :NOM, :APE, :EDAD, :F_NAC, :SEXO, :EMAIL, :MOVIL, :DIR, :OBSE)";
 require 'conexion.php';
 $conn = dbConnect();
 $resultado = $conn->prepare($sql);
 
-$resultado->execute([":CED"   => $_POST[$var[0]],
+$resultado->execute([":COD"   => $_POST[$var[0]],
                      ":NOM"   => $_POST[$var[1]], 
                      ":APE"   => $_POST[$var[2]], 
                      ":EDAD"  => $_POST[$var[3]], 

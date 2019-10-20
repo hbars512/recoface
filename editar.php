@@ -19,18 +19,18 @@ include "./function/editar.php";
                 <div class="col-md-4 inputGroupContainer">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-align-center"></i></span>
-                        <input readonly="" onkeypress="solonum()" onpaste="alert('No puedes pegar');return false" id="id" minlength="7" maxlength="8" required="" name="id" placeholder="Ingrese su cedula" class="form-control"  type="text" value="<?= $var[0]; ?>">
+                        <input readonly="" onkeypress="solonum()" onpaste="alert('No puedes pegar');return false" id="id" minlength="7" maxlength="8" required="" name="id" placeholder="Ingrese su codigo" class="form-control"  type="text" value="<?= $var[0]; ?>">
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="form-group">
-            <label class="col-md-4 control-label">Cedula</label>
+            <label class="col-md-4 control-label">Codigo</label>
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-align-center"></i></span>
-                    <input readonly="" onkeypress="solonum()" onpaste="alert('No puedes pegar');return false" id="cedula" minlength="7" maxlength="8" required="" name="cedula" placeholder="Ingrese su cedula" class="form-control"  type="text" value="<?= $var[1]; ?>">
+                    <input readonly="" onkeypress="solonum()" onpaste="alert('No puedes pegar');return false" id="codigo" minlength="7" maxlength="8" required="" name="codigo" placeholder="Ingrese su codigo" class="form-control"  type="text" value="<?= $var[1]; ?>">
                 </div>
             </div>
         </div>
