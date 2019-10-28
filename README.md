@@ -10,7 +10,7 @@
   git clone https://github.com/xguestone/recoface.git
 ```
 
-- La base de datos se encuentra en la sigueinte direccion `/recoface/db/crud.sql`
+- La base de datos se encuentra en la sigueinte direccion `/recoface/db/recoface.sql`
 ```php
 	DB_HOST = 'localhost';
 	DB_USER = "root";
