@@ -19,7 +19,7 @@ include "./function/editar.php";
                 <div class="col-md-4 inputGroupContainer">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-align-center"></i></span>
-                        <input readonly="" onkeypress="solonum()" onpaste="alert('No puedes pegar');return false" id="id" minlength="7" maxlength="8" required="" name="id" placeholder="Ingrese su codigo" class="form-control"  type="text" value="<?= $var[0]; ?>">
+                        <input readonly="" onkeypress="solonum()" onpaste="alert('No puedes pegar');return false" id="id" minlength="7" maxlength="8" required="" name="codigo" placeholder="Ingrese su codigo" class="form-control"  type="text" value="<?= $var[0]; ?>">
                     </div>
                 </div>
             </div>
@@ -30,7 +30,7 @@ include "./function/editar.php";
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-align-center"></i></span>
-                    <input readonly="" onkeypress="solonum()" onpaste="alert('No puedes pegar');return false" id="codigo" minlength="7" maxlength="8" required="" name="codigo" placeholder="Ingrese su codigo" class="form-control"  type="text" value="<?= $var[1]; ?>">
+                    <input readonly="" onkeypress="solonum()" onpaste="alert('No puedes pegar');return false" id="codigo" minlength="7" maxlength="8" required="" name="codigo" placeholder="Ingrese su codigo" class="form-control"  type="text" value="<?= $var[0]; ?>">
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@ include "./function/editar.php";
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                    <input onkeypress = "return soloLetras(event)" onpaste="alert('No puedes pegar');return false" maxlength="38" required="" name="nombre" placeholder="Ingrese su nombre" class="form-control"  type="text" value="<?= $var[2]; ?>">
+                    <input onkeypress = "return soloLetras(event)" onpaste="alert('No puedes pegar');return false" maxlength="38" required="" name="nombre" placeholder="Ingrese su nombre" class="form-control"  type="text" value="<?= $var[1]; ?>">
                 </div>
             </div>
         </div>
@@ -52,17 +52,7 @@ include "./function/editar.php";
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                    <input onkeypress = "return soloLetras(event)" onpaste="alert('No puedes pegar');return false" maxlength="38" required="" name="apellido" placeholder="Ingrese su apellido" class="form-control"  type="text" value="<?= $var[3]; ?>">
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class="col-md-4 control-label">Edad</label>
-            <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-menu-right"></i></span>
-                    <input onkeypress="solonum()" onpaste="alert('No puedes pegar');return false" maxlength="2" required="" name="edad" placeholder="Ingrese su edad" class="form-control"  type="text" value="<?= $var[4]; ?>">
+                    <input onkeypress = "return soloLetras(event)" onpaste="alert('No puedes pegar');return false" maxlength="38" required="" name="apellido" placeholder="Ingrese su apellido" class="form-control"  type="text" value="<?= $var[2]; ?>">
                 </div>
             </div>
         </div>
@@ -72,7 +62,7 @@ include "./function/editar.php";
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                    <input required="" name="fecha_nac" placeholder="Ingrese su fecha de nacimiento" class="form-control"  type="date" value="<?= $var[5]; ?>">
+                    <input required="" name="fecha_nac" placeholder="Ingrese su fecha de nacimiento" class="form-control"  type="date" value="<?= $var[3]; ?>">
                 </div>
             </div>
         </div>
@@ -86,7 +76,7 @@ include "./function/editar.php";
                     <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
                     <select name="sexo" class="form-control selectpicker" >
                         <?php
-                        if ($var[6] == "Femenino") {
+                        if ($var[4] == "Femenino") {
                             ?>
                             <option>Femenino</option>
                             <option>Masculino</option>
@@ -109,7 +99,7 @@ include "./function/editar.php";
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group" id="valid_email">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                    <input class="form-control" onblur="return validarEmail()" onclick="quitar_clase()" onpaste="alert('No puedes pegar');return false" maxlength="38" required="" id="email" name="email" placeholder="Ingrese su E-Mail" class="form-control"  type="text" value="<?= $var[7]; ?>">
+                    <input class="form-control" onblur="return validarEmail()" onclick="quitar_clase()" onpaste="alert('No puedes pegar');return false" maxlength="38" required="" id="email" name="email" placeholder="Ingrese su E-Mail" class="form-control"  type="text" value="<?= $var[5]; ?>">
                     <span id="equis" class=""></span>
                 </div>
             </div>
@@ -122,7 +112,7 @@ include "./function/editar.php";
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                    <input onkeypress="solonum()" onpaste="alert('No puedes pegar');return false" maxlength="11" required="" name="movil" placeholder="(0416) 256-1212" class="form-control" type="text" value="<?= $var[8]; ?>">
+                    <input onkeypress="solonum()" onpaste="alert('No puedes pegar');return false" maxlength="11" required="" name="movil" placeholder="(0416) 256-1212" class="form-control" type="text" value="<?= $var[6]; ?>">
                 </div>
             </div>
         </div>
@@ -134,7 +124,7 @@ include "./function/editar.php";
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                    <input onpaste="alert('No puedes pegar');return false" maxlength="50" required="" name="direccion" placeholder="Ingrese su direccion" class="form-control" type="text" value="<?= $var[9]; ?>">
+                    <input onpaste="alert('No puedes pegar');return false" maxlength="50" required="" name="direccion" placeholder="Ingrese su direccion" class="form-control" type="text" value="<?= $var[7]; ?>">
                 </div>
             </div>
         </div>
@@ -147,7 +137,7 @@ include "./function/editar.php";
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                    <textarea onpaste="alert('No puedes pegar');return false" maxlength="255" required="" class="form-control" name="observaciones" placeholder="indique su observación."><?= $var[10]; ?></textarea>
+                    <textarea onpaste="alert('No puedes pegar');return false" maxlength="255" required="" class="form-control" name="observaciones" placeholder="indique su observación."><?= $var[8]; ?></textarea>
                 </div>
             </div>
         </div>

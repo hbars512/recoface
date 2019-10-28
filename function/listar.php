@@ -3,24 +3,22 @@
 include 'conexion.php';
 $conn = dbConnect();
 
-$sql = "SELECT * FROM profesores order by id DESC";
+$sql = "SELECT * FROM profesores order by codigo DESC";
 foreach ($conn->query($sql) as $row) {
     $data[] = $row['sexo'];
     $data[] = $row['codigo'];
     $data[] = $row['nombre'];
     $data[] = $row['apellido'];
-    $data[] = $row['edad'];
-    $data[] = $row['id'];
+    $data[] = $row['codigo'];
 }
 
-function filtrar($id) {
+function filtrar($codigo) {
     $conn = dbConnect();
-    $sql = "SELECT * FROM profesores WHERE id = $id";
+    $sql = "SELECT * FROM profesores WHERE codigo = $codigo";
     foreach ($conn->query($sql) as $row) {
         $data[] = $row['codigo'];
         $data[] = $row['nombre'];
         $data[] = $row['apellido'];
-        $data[] = $row['edad'];
         $data[] = $row['fecha_nac'];
         $data[] = $row['sexo'];
         $data[] = $row['email'];

@@ -4,11 +4,11 @@ include 'conexion.php';
 
 $conn = dbConnect();
 
-$campos = ['id','codigo', 'nombre', 'apellido', 'edad', 'fecha_nac', 'sexo', 'email', 'movil', 'direccion', 'observaciones'];
+$campos = ['codigo', 'nombre', 'apellido', 'fecha_nac', 'sexo', 'email', 'movil', 'direccion', 'observaciones'];
 
-$sql = "SELECT * FROM profesores WHERE id = {$_GET['id']}";
+$sql = "SELECT * FROM profesores WHERE codigo = {$_GET['codigo']}";
 foreach ($conn->query($sql) as $row) {
-    foreach ($campos as $value) 
+    foreach ($campos as $value)
          $var[] = $row[$value];
 }
 return $var;

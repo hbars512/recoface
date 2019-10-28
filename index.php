@@ -22,11 +22,13 @@ include "./function/header.php";
                 </div>
             </div>
             <div class="buttonw">
-                <button type="button" class="btn btn-primary btn-lg">Marcar Asistencia</button>
+              <a href="marcar.php"><button type="button" class="btn btn-primary">Marcar</button></a>
             </div>
         </div>
     </div>
 </div>
+
+<script src="js/clock.js"></script>
 
 <?php
 include "./function/footer.php";

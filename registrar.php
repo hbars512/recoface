@@ -45,16 +45,6 @@ include "./function/header.php";
         </div>
 
         <div class="form-group">
-            <label class="col-md-4 control-label">Edad</label>
-            <div class="col-md-4 inputGroupContainer">
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-menu-right"></i></span>
-                    <input onkeypress="solonum()" onpaste="alert('No puedes pegar');return false" maxlength="2" required="" name="edad" placeholder="Ingrese su edad" class="form-control"  type="text">
-                </div>
-            </div>
-        </div>
-
-        <div class="form-group">
             <label class="col-md-4 control-label">Fecha de Nacimiento</label>
             <div class="col-md-4 inputGroupContainer">
                 <div class="input-group">

@@ -10,22 +10,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-        <script>
-            function cedula(valor) {
-                var parametros = {
-                    "valor": valor
-                };
-                $.ajax({
-                    data: parametros,
-                    url: './function/cedula.php',
-                    type: 'post',
-                    success: function (response) {
-                        $("#validar").html(response);
-                    }
-                });
-            }
-        </script>
-
         <style>
             @media screen and (max-width:768px){
                 #ocultar {

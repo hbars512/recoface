@@ -10,6 +10,9 @@
         <li class="nav-item">
             <a class="nav-link" href="listar.php">Listar</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="marcar.php">Marcar</a>
+        </li>
     </ul>
 </nav>
 

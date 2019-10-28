@@ -33,10 +33,6 @@ if (isset($data)) {
                         $data[$i];
                         $i++;
                         ?></p>
-                    <p><b>Edad:</b><?=
-                        $data[$i];
-                        $i++;
-                        ?></p>
                 </div>
                 <div>
                     <button style="width: 100%;" type="button" class="btn btn-default" data-toggle="modal" data-target="#<?= $data[$i] ?>">ver mas</button>
@@ -53,7 +49,7 @@ if (isset($data)) {
                                 <div class="modal-body">
                                     <?php
                                     $datos = filtrar($data[$i]);
-                                    $campo = array('CODIGO', 'NOMBRE', 'APELLIDO', 'EDAD', 'FECHA DE NAC', 'SEXO', 'EMAIL', 'MOVIL', 'DIRECCION', 'OBSERVACIONES');
+                                    $campo = array('CODIGO', 'NOMBRE', 'APELLIDO', 'FECHA DE NAC', 'SEXO', 'EMAIL', 'MOVIL', 'DIRECCION', 'OBSERVACIONES');
                                     for ($j = 0; $j < count($datos); $j++) {
                                         echo "<b>" . $campo[$j] . "</b>" . "= " . strtoupper($datos[$j]) . "<br>";
                                     }
@@ -69,12 +65,12 @@ if (isset($data)) {
                 </div>
                 <div class="text-center" style="width: 100%">
                     <div style="display: inline-block; width: 47%;">
-                        <a href="editar.php?id=<?= $data[$i] ?>">
+                        <a href="editar.php?codigo=<?= $data[$i] ?>">
                             <button style="width: 100%" type="button" class="btn btn-warning">Editar</button>
                         </a>
                     </div>
                     <div style="display: inline-block; width: 47%;">
-                        <a href="./function/eliminar.php?id=<?= $data[$i] ?>" onclick="return confirm('Desea eliminar el Paciente?');">
+                        <a href="./function/eliminar.php?codigo=<?= $data[$i] ?>" onclick="return confirm('Desea eliminar el Paciente?');">
                             <button style="width: 100%" type="button" class="btn btn-danger">Eliminar</button>
                         </a>
                     </div>

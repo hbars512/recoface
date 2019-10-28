@@ -3,9 +3,9 @@
 include './conexion.php';
 
 $conn = dbConnect();
-$sql = "DELETE FROM profesores WHERE id=:ID";
+$sql = "DELETE FROM asistencia WHERE idAsistencia=:COD; DELETE FROM profesores WHERE codigo=:COD";
 $resultado = $conn->prepare($sql);
-$resultado->execute(array(":ID" => $_GET["id"]));
+$resultado->execute(array(":COD" => $_GET["codigo"]));
 $resultado->closeCursor();
 
 header("location: ../listar.php");
