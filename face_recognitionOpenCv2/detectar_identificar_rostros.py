@@ -17,10 +17,11 @@ with open("labels.pickle",'rb') as f:
 
 web_cam = cv2.VideoCapture(0)
 
+
 while True:
     # Capture el marco
     ret, marco = web_cam.read()
-    grises = cv2.cvtColor(marco, cv2.COLOR_BGR2GRAY)    
+    grises = cv2.cvtColor(marco, cv2.COLOR_BGR2GRAY)
     rostros = faceCascade.detectMultiScale(grises, 1.5, 5)
 
     # Dibujar un rectángulo alrededor de las rostros
@@ -41,10 +42,18 @@ while True:
             if conf > 50:
                 #print(conf)
                 nombre = "Desconocido"
+            else:
+                nombre = nombre
+                text_file = open('../function/code.txt', 'w')
+                nombre = nombre+"\n"
+                text_file.write(nombre)
+                text_file.close()
 
+            nombre = etiquetas[id_]
             color = (255,255,255)
             grosor = 2
             cv2.putText(marco, nombre, (x,y), font, 1, color, grosor, cv2.LINE_AA)
+
 
         img_item = "my-image.png"
         cv2.imwrite(img_item, roi_gray)

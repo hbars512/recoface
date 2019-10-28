@@ -1,2 +1,3 @@
 face_recognitionOpenCv2/*.yml
 face_recognitionOpenCv2/*.pickle
+face_recognitionOpenCv2/images/*
