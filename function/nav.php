@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light" style="background-color: #e3f2fd; margin-bottom: 0%;">
+<nav class="navbar navbar-default" style="margin-bottom: 0%;">
     <a class="navbar-brand" id="ocultar" href="#">Recoface</a>
     <ul class="nav navbar-nav">
         <li class="nav-item active">
