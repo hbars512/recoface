@@ -18,7 +18,8 @@ with open("labels.pickle",'rb') as f:
 web_cam = cv2.VideoCapture(0)
 
 
-while True:
+index=0;
+while True and index < 2:
     # Capture el marco
     ret, marco = web_cam.read()
     grises = cv2.cvtColor(marco, cv2.COLOR_BGR2GRAY)
@@ -44,10 +45,11 @@ while True:
                 nombre = "Desconocido"
             else:
                 nombre = nombre
-                text_file = open('../function/code.txt', 'w')
+                text_file = open('../function/code.txt', 'a')
                 nombre = nombre+"\n"
                 text_file.write(nombre)
                 text_file.close()
+                index += 1
 
             nombre = etiquetas[id_]
             color = (255,255,255)
